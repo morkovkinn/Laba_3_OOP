@@ -32,7 +32,7 @@ class PaperBook(Book):
     @pages.setter
     def pages(self, value):
         if not isinstance(value, int) or value <= 0:
-            raise ValueError("Количество страниц должно быть неотрицательным целым числом.")
+            raise ValueError("Количество страниц должно быть неотрицательным целым числом")
         self._pages = value
 
     def __str__(self):
@@ -56,4 +56,3 @@ class AudioBook(Book):
 
     def __str__(self):
         return f"Книга {self.name}. Автор {self.author}. Длительность: {self.duration} минут"
-
